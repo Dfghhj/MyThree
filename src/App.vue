@@ -19,6 +19,7 @@
               <el-menu-item-group>
                 <el-menu-item index="helloworld">HelloWord</el-menu-item>
                 <el-menu-item index="triangle">Triangle</el-menu-item>
+                <el-menu-item index="greensquare">Green Square</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
             <el-submenu index="document">
@@ -64,6 +65,8 @@ export default {
           this.$router.push({path:'/helloworld'});
         } else if ('triangle' === keyPath[1]) {
           this.$router.push({path:'/triangle'});
+        } else if ('greensquare' === keyPath[1]) {
+          this.$router.push({path:'/greensquare'});
         }
       } else if ('document' === keyPath[0]) {
         if ('01' === keyPath[1]) {

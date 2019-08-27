@@ -1,6 +1,6 @@
 <template>
   <div id="triangle">
-    <canvas id="demo-canvas"></canvas>
+    <canvas id="triangle-canvas"></canvas>
   </div>
 </template>
 
@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     init() {
-      this.canvas = document.getElementById('demo-canvas')
+      this.canvas = document.getElementById('triangle-canvas')
       this.renderer = new THREE.WebGLRenderer({canvas: this.canvas}) 
       this.scene = new THREE.Scene()
       this.camera = new THREE.OrthographicCamera(-this.width/2, this.width/2, this.height/2, -this.height/2, -1000, 1000)

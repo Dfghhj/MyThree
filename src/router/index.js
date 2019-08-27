@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
 import Triangle from '@/components/demo/triangle/Triangle.vue'
+import GreenSquare from '@/components/demo/greenSquare/GreenSquare.vue'
 import Document from '@/components/document/Document.vue'
 
 Vue.use(Router)
@@ -17,6 +18,11 @@ export default new Router ({
             path: '/triangle',
             name: 'Triangle',
             component: Triangle,
+        },
+        {
+            path: '/greensquare',
+            name: 'GreenSquare',
+            component: GreenSquare,
         },
         {
             path: '/doc/:number',
