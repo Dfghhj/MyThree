@@ -8,7 +8,7 @@
               src="http://ww1.sinaimg.cn/large/ea264325ly1g6d8nj315jj20dw0dw3yl.jpg" 
               fit="fill"/>
           <el-menu
-            default-active="1-1"
+            default-active="demo"
             class="el-menu-vertical-demo"
             active-text-color="#333"
             @select="handleSelect">
@@ -17,7 +17,6 @@
                 <i class="el-icon-s-data"/><span>Three-Demo</span>
               </template>
               <el-menu-item-group>
-                <el-menu-item index="helloworld">HelloWord</el-menu-item>
                 <el-menu-item index="triangle">Triangle</el-menu-item>
                 <el-menu-item index="greensquare">Green Square</el-menu-item>
               </el-menu-item-group>
@@ -61,9 +60,7 @@ export default {
       }
       this.path = keyPath.join('-')
       if ('demo' === keyPath[0]) {
-        if ('helloworld' === keyPath[1]) {
-          this.$router.push({path:'/helloworld'});
-        } else if ('triangle' === keyPath[1]) {
+        if ('triangle' === keyPath[1]) {
           this.$router.push({path:'/triangle'});
         } else if ('greensquare' === keyPath[1]) {
           this.$router.push({path:'/greensquare'});
