@@ -36,7 +36,7 @@ export default {
       this.scene = new THREE.Scene()
       this.camera = new THREE.OrthographicCamera(-this.width/2, this.width/2, this.height/2, -this.height/2, -1000, 1000)
       this.renderer.setClearColor(new THREE.Color("rgb(0, 0, 0)"))
-      this.renderer.setSize(400,400)
+      this.renderer.setSize(700, 700)
       this.triangleShape = new THREE.Shape()
       this.triangleShape.moveTo(0, 100)
       this.triangleShape.lineTo(-100, -100)
@@ -65,7 +65,7 @@ export default {
     },
     render() {
         this.changeAngle()
-        this.mesh.rotation.set(0, this.currentAngle, 0)
+        this.mesh.rotation.set(0,this.currentAngle, 0)
         this.renderer.render(this.scene, this.camera)
         window.requestAnimationFrame(this.render.bind(this))
     }
@@ -79,6 +79,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

@@ -31,7 +31,7 @@ export default {
         this.canvas = document.getElementById('square-canvas')
         this.renderer = new THREE.WebGLRenderer({canvas: this.canvas}) 
         this.renderer.setClearColor(new THREE.Color("rgb(0, 0, 0)"))
-        this.renderer.setSize(400,400)
+        this.renderer.setSize(1400, 700)
 
 		this.geometry = new THREE.BoxGeometry( 1, 1, 1 );
 		this.material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
@@ -60,6 +60,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

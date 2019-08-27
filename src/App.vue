@@ -11,6 +11,8 @@
             default-active="demo"
             class="el-menu-vertical-demo"
             active-text-color="#333"
+            @open="handleOpen"
+            @close="handleClose"
             @select="handleSelect">
             <el-submenu index="demo">
               <template slot="title">
@@ -53,6 +55,16 @@ export default {
   },
 
   methods: {
+    handleOpen(index) {
+      if ('demo' === index) {
+        this.$router.push({path:'/demo'});
+      }
+    },
+    handleClose(index) {
+      if ('demo' === index) {
+        this.$router.push({path:'/'});
+      }
+    },
     handleSelect(key, keyPath) {
       if (this.path === keyPath.join('-')) {
         this.$message('Already on this page');
