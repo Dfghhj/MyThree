@@ -28,7 +28,7 @@ export default {
         var canvas = document.getElementById('demo-canvas')
         var renderer = new THREE.WebGLRenderer({canvas: canvas}) 
         renderer.setClearColor(new THREE.Color("rgb(0, 0, 0)"))
-        renderer.setSize(1400, 700)
+        renderer.setSize(window.innerWidth * 0.8 , window.innerHeight * 0.8)
 
         var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 500 );
         camera.position.set( 0, 0, 100 );

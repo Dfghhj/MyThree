@@ -19,23 +19,34 @@ export default {
         return {
             html: '',
             docs: {
-                '01' : require('html-loader!markdown-loader!../../document/01.md')
+                '01' : require('html-loader!markdown-loader!../../document/01-基本概念.md'),
+                '02' : require('html-loader!markdown-loader!../../document/02-常见的图元.md')
             }
         }
     },
     props: {
         number: {
             type: String,
-            default: null
+            default: '01'
         }
     },
-    mounted () {
-        let converter = new showdown.Converter()
-        let text = this.docs[this.number].toString()
-        this.html = converter.makeHtml(text)
+    watch:{
+      number() {
+        this.update()
+      }
+    },
+    mounted() {
+      this.update()
     },
     updated() {
       Prism.highlightAll();
+    },
+    methods: {
+      update() {
+        let converter = new showdown.Converter()
+        let text = this.docs[this.number].toString()
+        this.html = converter.makeHtml(text)
+      }
     }
 }
 </script>

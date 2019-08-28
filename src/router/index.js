@@ -1,14 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Home from '@/components/Home.vue'
 import Demo from '@/components/demo/demo.vue'
 import Triangle from '@/components/demo/triangle/Triangle.vue'
-import GreenSquare from '@/components/demo/greenSquare/GreenSquare.vue'
+import GreenCube from '@/components/demo/greenCube/GreenCube.vue'
+import ThreeDimensionalText from '@/components/demo/text/ThreeDimensionalText.vue'
 import Document from '@/components/document/Document.vue'
 
 Vue.use(Router)
 
 export default new Router ({
     routes: [
+        {
+            path: '/',
+            name: 'Home',
+            component: Home,
+        },
         {
             path: '/demo',
             name: 'Demo',
@@ -20,9 +27,14 @@ export default new Router ({
             component: Triangle,
         },
         {
-            path: '/greensquare',
-            name: 'GreenSquare',
-            component: GreenSquare,
+            path: '/greenCube',
+            name: 'GreenCube',
+            component: GreenCube,
+        },
+        {
+            path: '/3DText',
+            name: 'ThreeDimensionalText',
+            component: ThreeDimensionalText,
         },
         {
             path: '/doc/:number',

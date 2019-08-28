@@ -6,7 +6,8 @@
           <el-image 
               style="width: 200px; height: 200px"
               src="http://ww1.sinaimg.cn/large/ea264325ly1g6d8nj315jj20dw0dw3yl.jpg" 
-              fit="fill"/>
+              fit="fill"
+              @click="clickHomeImg"/>
           <el-menu
             default-active="demo"
             class="el-menu-vertical-demo"
@@ -20,7 +21,8 @@
               </template>
               <el-menu-item-group>
                 <el-menu-item index="triangle">Triangle</el-menu-item>
-                <el-menu-item index="greensquare">Green Square</el-menu-item>
+                <el-menu-item index="greenCube">Green Cube</el-menu-item>
+                <el-menu-item index="3DText">3D Text</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
             <el-submenu index="document">
@@ -28,8 +30,8 @@
                 <i class="el-icon-document"/><span>Document</span>
               </template>
               <el-menu-item-group>
-                <el-menu-item index="01">01</el-menu-item>
-                <el-menu-item index="02">02</el-menu-item>
+                <el-menu-item index="01">01.基本概念</el-menu-item>
+                <el-menu-item index="02">02.常见的图元</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
             <el-menu-item index="three">
@@ -74,8 +76,10 @@ export default {
       if ('demo' === keyPath[0]) {
         if ('triangle' === keyPath[1]) {
           this.$router.push({path:'/triangle'});
-        } else if ('greensquare' === keyPath[1]) {
-          this.$router.push({path:'/greensquare'});
+        } else if ('greenCube' === keyPath[1]) {
+          this.$router.push({path:'/greenCube'});
+        } else if ('3DText' === keyPath[1]) {
+          this.$router.push({path:'/3DText'});
         }
       } else if ('document' === keyPath[0]) {
         if ('01' === keyPath[1]) {
@@ -86,6 +90,9 @@ export default {
       } else if ('three' === keyPath[0]) {
         this.$router.push({path:'/three'});
       }
+    },
+    clickHomeImg() {
+       this.$router.push({path:'/'});
     }
   }
 }
