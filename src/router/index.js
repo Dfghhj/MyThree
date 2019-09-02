@@ -4,6 +4,7 @@ import Home from '@/components/Home.vue'
 import Demo from '@/components/demo/demo.vue'
 import Triangle from '@/components/demo/triangle/Triangle.vue'
 import GreenCube from '@/components/demo/greenCube/GreenCube.vue'
+import Kindred from '@/components/demo/lol/kindred/Kindred.vue'
 import ThreeDimensionalText from '@/components/demo/text/ThreeDimensionalText.vue'
 import Document from '@/components/document/Document.vue'
 
@@ -35,6 +36,11 @@ export default new Router ({
             path: '/3DText',
             name: 'ThreeDimensionalText',
             component: ThreeDimensionalText,
+        },
+        {
+            path: '/lol/kindred',
+            name: 'Kindred',
+            component: Kindred,
         },
         {
             path: '/doc/:number',

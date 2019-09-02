@@ -23,6 +23,10 @@
                 <el-menu-item index="triangle">Triangle</el-menu-item>
                 <el-menu-item index="greenCube">Green Cube</el-menu-item>
                 <el-menu-item index="3DText">3D Text</el-menu-item>
+                <el-submenu index="lol">
+                  <span slot="title">LOL</span>
+                  <el-menu-item index="kindred">Kindred</el-menu-item>
+                </el-submenu>
               </el-menu-item-group>
             </el-submenu>
             <el-submenu index="document">
@@ -80,6 +84,10 @@ export default {
           this.$router.push({path:'/greenCube'});
         } else if ('3DText' === keyPath[1]) {
           this.$router.push({path:'/3DText'});
+        } else if ('lol' === keyPath[1]) {
+          if ('kindred' === keyPath[2]) {
+            this.$router.push({path:'/lol/kindred'});
+          }
         }
       } else if ('document' === keyPath[0]) {
         if ('01' === keyPath[1]) {
@@ -121,6 +129,14 @@ export default {
   .el-main {
     color: #333;
     text-align: center;
+  }
+  .el-submenu__title {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .el-menu-item {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
   }
 
 </style>
