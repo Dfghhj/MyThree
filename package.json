@@ -13,7 +13,7 @@
     "html-loader": "^0.5.5",
     "markdown-loader": "^5.1.0",
     "prismjs": "^1.17.1",
-    "showdown": "^1.9.0",
+    "showdown": "^1.9.1",
     "three": "^0.107.0",
     "vue": "^2.6.10"
   },
