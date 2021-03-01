@@ -14,7 +14,7 @@
     "markdown-loader": "^5.1.0",
     "prismjs": "^1.17.1",
     "showdown": "^1.9.0",
-    "three": "^0.107.0",
+    "three": "^0.125.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
